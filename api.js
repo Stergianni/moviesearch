@@ -27,7 +27,7 @@ function searchByTitle(title) {
     console.log("\n#searchByTitle(", title, ")");
     openModal();
 
-    get($.ajax('http://www.omdbapi.com/?apikey=3ee6c07&s=' + title + '&page=' + page)
+    get($.ajax('https://www.omdbapi.com/?apikey=3ee6c07&s=' + title + '&page=' + page)
         .then(
             function (response) {
                 lResults = response.Search;
@@ -51,7 +51,7 @@ function searchByTitle(title) {
 function searchByTitleAndYear(title, year) {
     console.log("\n#searchByTitleAndYear(", title, ",", year, ")");
     openModal();
-    get($.ajax('http://www.omdbapi.com/?apikey=3ee6c07&t=' + title + '&y=' + year)
+    get($.ajax('https://www.omdbapi.com/?apikey=3ee6c07&t=' + title + '&y=' + year)
         .then(
             function (response) {
                 movie = response;
@@ -73,7 +73,7 @@ function searchByTitleAndYear(title, year) {
 function searchByID(id) {
     console.log("\n#searchByID(", id, ")");
     openModal();
-    get($.ajax('http://www.omdbapi.com/?i=' + id + '&apikey=3ee6c07')
+    get($.ajax('https://www.omdbapi.com/?i=' + id + '&apikey=3ee6c07')
         .then(
             function (response) {
                 movie = response;
